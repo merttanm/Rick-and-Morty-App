@@ -1,0 +1,54 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+    navigatingTo="onNavigatingTo">
+    <Page.actionBar>
+        <ActionBar backgroundColor="black" height="40%">
+            <Image
+                src="https://cdn.indreams.me/5c49a63c975364c1d200a3555237a3a6_5"
+                stretch="aspectFill" />
+        </ActionBar>
+
+    </Page.actionBar>
+
+    <StackLayout class="episode4-panel">
+        <ScrollView>
+            <StackLayout>
+
+                <Button text="M. Night Shaym-Aliens!" backgroundColor="RED"
+                    class="btn btn-outline btn-active" id="getJSON"
+                    tap="onButtonTap" />
+
+
+                <GridLayout columns="*,2*">
+                    <Label text="{{ name_n }}" textWrap="true" col="0" />
+                    <Label class="p-4" text="{{ name }}" textWrap="true"
+                        col="1" testAttr="some value"
+                        visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}" />
+                </GridLayout>
+
+                <GridLayout columns="*,2*">
+                    <Label text="{{ air_date_d }}" textWrap="true" col="0" />
+                    <Label class="p-4" text="{{ air_date }}" textWrap="true"
+                        col="1" testAttr="some value"
+                        visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}" />
+                </GridLayout>
+                <GridLayout columns="*,2*">
+                    <Label text="{{ episode_e }}" textWrap="true" col="0" />
+                    <Label class="p-4" text="{{ episode }}" textWrap="true"
+                        col="1" testAttr="some value"
+                        visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}" />
+                </GridLayout>
+
+                <GridLayout columns="*,2*" >
+                    <Label text="{{ characters_c }}" textWrap="true" col="0"
+                         />
+                    <Label class="p-4" text="{{ url }}" textWrap="true"
+                         col="1" testAttr="some value"
+                        visibility="{{ getJSONResultVisible ? 'visible' : 'collapsed' }}" />
+                </GridLayout>
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

@@ -1,0 +1,17 @@
+<Page class="page">
+    <ActionBar title="Category" class="action-bar"></ActionBar>
+
+    <StackLayout class="home-panel">
+        <Button class="btn btn-primary" text="navigate('item-page')"
+            tap="navigateToItem" />
+        <ListView items="{{ countries }}" itemTap="{{ onItemTap }}"
+            style="height:1250px">
+            <ListView.itemTemplate>
+                <FlexboxLayout flexDirection="row">
+                    <Label text="{{ name }}" class="t-12"
+                        verticalAlignment="center" style="width: 60%" />
+                </FlexboxLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
